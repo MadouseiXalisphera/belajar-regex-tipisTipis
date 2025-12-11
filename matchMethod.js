@@ -50,7 +50,31 @@ console.log(result);
 
 //console.log(result);
 
-let quoteSample = "Blueberry 3.141592653s are delicius";
-let myRegex = /[a-z0-9]/ig;
-let result = quoteSample.match(myRegex);
-console.log (result);
+// let quoteSample = "Blueberry 3.141592653s are delicius";
+// let myRegex = /[a-z0-9]/ig;
+// let result = quoteSample.match(myRegex);
+// console.log (result);
+
+// match single character that not specified 
+let quoteSample = "3 blind mice.";
+let myRegex = /[^0-9aiueo]/ig;
+let result =quoteSample.match(myRegex);
+console.log(result);
+
+//match character that occurs one or more time
+
+// let difficultSpelling = "Mississipspi";
+// let myRegex = /s+/g;
+// let result = difficultSpelling.match(myRegex);
+// console.log(result);
+
+//match character that occurs zero or one more time 
+// let soccerWord = "gooooooooal!";
+// let gPhrase = "ggout feeling";
+// let oPhrase = "over the moon";
+// let go^Regex = /go*/;
+// console.log(soccerWord.match(goRegex));console.log(gPhrase.match(goRegex));console.log(oPhrase.match(goRegex));
+
+// let chewieQuote = "Aaaaaaaaaarrrgh!";
+// let chewieRegex = /a*/i;
+// console.log(chewieQuote.match(chewieRegex));

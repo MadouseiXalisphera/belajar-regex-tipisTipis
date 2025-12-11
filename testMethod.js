@@ -8,7 +8,7 @@ let myregex = /Hello/;
 let result = myregex.test(mystring);
 
 console.log(result);
-*/
+
 
 // case sensitive
 
@@ -34,11 +34,11 @@ console.log (result);
 
 // ignore case - flag
 
-/*
+
 let mystring = "freeCodeCamp";
 let fccRegex = /freecodecamp/i;
 let result = fccRegex.test(mystring);
 console.log(result);
-*/
+
 
 
