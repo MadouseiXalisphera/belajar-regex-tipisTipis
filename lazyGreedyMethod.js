@@ -32,8 +32,84 @@
 // console.log(result);
 
 //match all number
-let numString = "Your sandwich will be $5.00";
-let numRegex = /./g;
-let result = numString.match(numRegex).length;
-console.log(result);
+// let numString = "Your sandwich will be $5.00";
+// let numRegex = /./g;
+// let result = numString.match(numRegex).length;
+// console.log(result);
 
+// restrict posible username
+// let username ="JackOfAllTrades";
+// let userCheck = /^[A-Za-z]{2,}\d*$/;
+// let result = userCheck.test(username);
+// console.log(result);
+
+//match whitespace
+// let sample = "Whitespace is important in separating words";
+// let countWhiteSpace = /\S/g;
+// let result = sample.match(countWhiteSpace);
+// console.log (result);   
+
+//specify upper and lowwer number of match
+// let ohStr = "Ohhh no";
+// let ohRegex = /Oh{3,} no/;
+// let result = ohRegex.test(ohStr);
+// console.log(result);
+
+//specify only the lower number of matches
+// let haStr = "Hazzzzah";
+// let haRegex = /z{4,}/;
+// let result = haRegex.test(haStr);
+// console.log(result);
+
+//specify exact number of the matches 
+// let timStr ="Timmmmber";
+// let timRegex = /Tim{4}ber/;
+// let result = timRegex.test(timStr);
+// console.log(result);
+
+//check all for all or none 
+// let favWord = "favourite";
+// let favRegex = /favou?rite/;
+// let result = favRegex.test(favWord);
+// console.log(result);
+
+//+ and - lookahed
+// let quit = "qu";
+// let noquit = "qt";
+// let quRegex = /q(?=u)/;
+// let qRegex = /q(?!u)/;
+// console.log(quit.match(quRegex)); console.log(noquit.match(qRegex));    
+
+// let sampleWord = "astro22naut";
+// let pwRegex = /(?=\w{5})(?=\d{2})/;
+// let result = pwRegex.test(sampleWord);
+// console.log (result);
+
+//reuse pattern using capture group 
+// let repeatStr ="regex regex regex nya";
+// let repeatRegex = /(\w+)\s\1/;
+// //console.log(repeatRegex.test(repeatStr)); console.log (repeatStr.match(repeatRegex));
+
+// let repeatNum = "42 42 42";
+// let reRegex = /^(\d+)\s\1\s\1$/;
+// let result = reRegex.test(repeatNum);
+// console.log(result)
+
+//use capture group to search and replace 
+// let wrongText = "The sky is silver";
+// let silverRegex = /silver/;
+// //console.log(wrongText.replace(silverRegex,"blue"));
+
+// //console.log("Code Camp".replace(/(\w+)\s(\w+)/,"$2 $1"));
+
+// let huhText = "This sandwich is good";
+// let fixRegex = /good/;
+// let replaceText = "okey-dockey";
+// let result = huhText.replace(fixRegex,replaceText);
+// console.log(result);
+
+//remove whitspace from start and end
+let str = "     Hello Wordl!  ";
+let wsRegex = /^\s+|\s+$/;
+let result = str.replace(wsRegex,"");
+console.log(result);
