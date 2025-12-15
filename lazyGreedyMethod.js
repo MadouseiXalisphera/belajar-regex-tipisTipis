@@ -109,7 +109,12 @@
 // console.log(result);
 
 //remove whitspace from start and end
-let str = "     Hello Wordl!  ";
-let wsRegex = /^\s+|\s+$/;
-let result = str.replace(wsRegex,"");
-console.log(result);
+// let str = "     Hello Wordl!  ";
+// let wsRegex = /^\s+|\s+$/;
+// let result = str.replace(wsRegex,"");
+// console.log(result);
+
+let kata = "asu";
+let regexnya = `/${kata}/`
+let para = "asukabeh";
+console.log(regexnya.test(para));
