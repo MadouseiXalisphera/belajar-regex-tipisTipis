@@ -27,7 +27,7 @@ const objConvert = [
     regex : /\[(.*?)\]\((.*?)\)/gim,
     replace: "<a href=\"$2\">$1</a>"
   },{
-    regex : /^>(.*$)/gim,
+    regex : /^> (.*$)/gim,
     replace: "<blockquote>$1</blockquote>"
   }
 ];
@@ -35,9 +35,15 @@ const markdownInput = document.querySelector("#markdown-input");
 const preview = document.querySelector("#preview");
 const htmlOutput = document.querySelector("#html-output");
 
-function convertMarkdown (e){
-  preview.textContent = e.target.value;
+function convertMarkdown (){
+  let text = markdownInput.value
+  objConvert.forEach((object)=>{
+   text = text.replace(object["regex"],object["replace"]);
+  })
+  htmlOutput.textContent = text;
+  preview.innerHTML = text;
+  return text;
+  
 }
-markdownInput.addEventListener("input",convertMarkdown)
+markdownInput.addEventListener("input",convertMarkdown);
 
-console.log(preview);
